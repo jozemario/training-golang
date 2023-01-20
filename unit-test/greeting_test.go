@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"golang.org/x/example/stringutil"
 	"testing"
+
+	"golang.org/x/example/stringutil"
 )
 
 func Test_SayHello_ValidArgument(t *testing.T) {
@@ -17,12 +18,11 @@ func Test_SayHello_ValidArgument(t *testing.T) {
 	}
 
 	for _, item := range inputs {
-
 		result := sayHello(item.name)
 		if result != item.result {
 			t.Errorf("\"sayHello('%s')\" failed, expected -> %v, got -> %v", item.name, item.result, result)
 		} else {
-			t.Logf("\"sayHello('%s')\" succeded, expected -> %v, got -> %v", item.name, item.result, result)
+			t.Logf("\"sayHello('%s')\" succeeded, expected -> %v, got -> %v", item.name, item.result, result)
 		}
 	}
 }
@@ -35,7 +35,7 @@ func Test_SayGoodBye(t *testing.T) {
 	if result != expected {
 		t.Errorf("\"sayGoodBye('%s')\" FAILED, expected -> %v, got -> %v", name, expected, result)
 	} else {
-		t.Logf("\"sayGoodBye('%s')\" SUCCEDED, expected -> %v, got -> %v", name, expected, result)
+		t.Logf("\"sayGoodBye('%s')\" SUCCEEDED, expected -> %v, got -> %v", name, expected, result)
 	}
 }
 
@@ -45,7 +45,7 @@ func BenchmarkSayHello(b *testing.B) {
 	}
 }
 
-func ExampleSayHello() {
+func Example_sayHello() {
 	fmt.Println(sayHello("Mert"))
 	// Output: Hello Mert
 }

@@ -5,7 +5,7 @@ import (
 )
 
 func sayHello(name string) string {
-	if len(name) == 0 {
+	if name == "" {
 		return "Hello Anonymous"
 	}
 
@@ -13,8 +13,9 @@ func sayHello(name string) string {
 }
 
 func sayGoodBye(name string) string {
-	if len(name) == 0 {
+	if name == "" {
 		return "Bye Bye Anonymous!"
 	}
+
 	return fmt.Sprintf("Bye Bye %s", name)
 }

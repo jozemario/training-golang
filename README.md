@@ -43,12 +43,48 @@ $ cd output/bin/
 $ ./bfe -c ../conf -l ../log
 ```
 
+### go linters
+```
+Installing GolangCI-Lint
+Use the command below to install golangci-lint locally on any operating system. Other OS-specific installation options can be found here.
+
+$ go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+copy
+Once installed, you should check the version that was installed:
+
+$ golangci-lint version
+golangci-lint has version v1.40.1 built from (unknown, mod sum: "h1:pBrCqt9BgI9LfGCTKRTSe1DfMjR6BkOPERPaXJYXA6Q=") on (unknown)
+copy
+You can also view the all the available linters through the following command:
+
+$ golangci-lint help linters
+
+If you run the enabled linters at the root of your project directory, you may see some errors. Each problem is reported with all the context you need to fix it including a short description of the issue, and the file and line number where it occurred.
+
+$ golangci-lint run # equivalent of golangci-lint run ./...
+
+You can also choose which directories and files to analyse by passing one or more directories or paths to files.
+
+$ golangci-lint run dir1 dir2 dir3/main.go
+```
+
 ### dev notes
 ```
-go mod init unit-test  
-go mod tidy  
-go run . 
-go test -cover 
+go mod init unit-test  //create module
+go mod tidy  //sync libraries
+go run .  //run project
 go test -bench=. 
 go test -v 
+
+go test -cover 
+go test -coverprofile=coverage.out
+go tool cover -func=coverage.out
+go tool cover -html=coverage.out
+
+---
+Lint
+golangci-lint help linters
+golangci-lint run -v
+golangci-lint run --fix
+
 ```
