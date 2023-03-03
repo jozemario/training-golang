@@ -1,0 +1,14 @@
+{
+  "REPO_NAME": "vaultrepo",
+  "VAULT_NAMESPACE": "some-value",
+  "VAULT_ADDR": "https://some-value",
+  "VAULT_TOKEN": "some-value",
+  "VAULT_ENV": "stg",
+  "VAULT_ROLE_ID": "some-value",
+  "VAULT_SECRET_ID": "some-value",
+  "VAULT_SKIP_VERIFY": false,
+  "TEST_PASSWORD": "test-pass",
+  "TEST_REQUEST_id": "test-request-id",
+  "TEST_USER": "testuser23@yopmail.com",
+  "VAULT_TESTING": "Enabled"
+}
