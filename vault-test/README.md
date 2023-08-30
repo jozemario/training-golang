@@ -14,6 +14,8 @@ go run .
 
 go test -covermode=atomic -coverprofile=./coverage.txt -v --run TestReadSecret
 
+ go test -covermode=atomic -coverprofile=./coverage.txt -v ./...
+
 #####
 -log json Obj map[string]interface{}
 b, _ := json.Marshal(jsonObj);fmt.Println(string(b))
